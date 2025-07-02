@@ -1,6 +1,5 @@
 /*! tailwindcss v4.1.11 | MIT License | https://tailwindcss.com */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
-@layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -168,38 +167,7 @@
   .static {
     position: static;
   }
-  .bg-cyan-400 {
-    background-color: var(--color-cyan-400);
-  }
-  .py-5 {
-    padding-block: calc(var(--spacing) * 5);
-  }
-  .text-center {
-    text-align: center;
-  }
-  .font-roboto {
-    font-family: var(--font-roboto);
-  }
-  .text-2xl {
-    font-size: var(--text-2xl);
-    line-height: var(--tw-leading, var(--text-2xl--line-height));
-  }
-  .font-bold {
-    --tw-font-weight: var(--font-weight-bold);
-    font-weight: var(--font-weight-bold);
-  }
-  .text-white {
-    color: var(--color-white);
-  }
-}
-@property --tw-font-weight {
-  syntax: "*";
-  inherits: false;
-}
-@layer properties {
-  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
-    *, ::before, ::after, ::backdrop {
-      --tw-font-weight: initial;
-    }
+  .block {
+    display: block;
   }
 }

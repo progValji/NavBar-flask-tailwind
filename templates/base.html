@@ -6,20 +6,23 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/output.css') }}">
     <title>Desarrollo Web - {% block title %}Por defecto{% endblock %}</title>
 </head>
-<body>
-    <header>
+<body class="font-roboto">
+    <header class="max-w-[1200px] h-20 bg-cyan-300 flex px-5 py-2.5 items-center flex-wrap relative">
         <figure>
-            <img src="{{url_for('static', filename = 'asset/logo.jpg')}}" alt="Logo">
+            <img src="{{url_for('static', filename = 'asset/logo.png')}}" alt="Logo" class="w-[70px]">
         </figure>
 
-        <input type="checkbox" id="input__checkbox">
-        <label for="input__checkbox">
+        <input type="checkbox" id="input__checkbox" class="hidden peer">
+        <label for="input__checkbox" class="ml-auto">
             <img src="{{url_for('static', filename = 'asset/hambur.svg')}}" alt="Icono Menu Hamburgesa">
+            <img src="{{url_for('static', filename = 'asset/x.svg')}}" alt="Menu X" class="hidden">
         </label>
 
-        <nav>
-            <ul>
-                <li><a href="{{ url_for('index') }}">Inicio</a></li>
+        <a href="#" class="hidden">Registrate ahora</a>
+
+        <nav class="rounded-2xl py-4 w-[80%] max-x-[350px] mx-auto bg-cyan-600 absolute top-22 left-[50%] translate-x-[-50%] translate-y-[-150%] transition-transform duration-300 shadow-xl/30 peer-checked:translate-y-0">
+            <ul class="grid gap-5 place-items-center text-white">
+                <li><a href="{{ url_for('index') }}" class="font-bold">Inicio</a></li>
                 <li><a href="{{ url_for('agenda') }}">Agenda</a></li>
                 <li><a href="{{ url_for('anfitrion') }}">Anfitrion</a></li>
                 <li><a href="{{ url_for('reseña') }}">Reseña</a></li>
@@ -30,8 +33,8 @@
 
     {% block content %}{% endblock %}
 
-    <footer>
-        <p>© Osvaldo Valdivia</p>
+    <footer class="bg-cyan-300 p-6">
+        <p class="text-center font-bold">© Osvaldo Valdivia</p>
     </footer>
 </body>
 </html>

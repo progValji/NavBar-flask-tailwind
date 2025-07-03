@@ -257,6 +257,10 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .border-b-2 {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 2px;
+  }
   .bg-200 {
     background-color: var(--color-200);
   }
@@ -449,6 +453,12 @@
   .sm\:grid-cols-5 {
     @media (width >= 40rem) {
       grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+  }
+  .sm\:border-b-2 {
+    @media (width >= 40rem) {
+      border-bottom-style: var(--tw-border-style);
+      border-bottom-width: 2px;
     }
   }
   .sm\:bg-transparent {

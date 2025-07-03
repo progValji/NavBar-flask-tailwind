@@ -20,13 +20,23 @@
 
         <a href="#" class="bg-gradient-to-l from-300 to-500 font-bol py-2.5 px-5 shadow-[3px_3px_9px_0px_rgba(0,0,0,0.75)] text-white rounded-xl hidden transition-all duration-300 hover:scale-[1.1] hover:shadow-[4px_3px_17px_0px_rgba(0,0,0,0.75)] md:block md:order-3">Registrate ahora</a>
 
-        <nav class="rounded-2xl py-4 w-[80%] max-w-[350px] ml-auto bg-200 absolute top-22 left-[50%] translate-x-[-50%] translate-y-[-150%] transition-transform duration-300 shadow-xl/30 peer-checked:translate-y-0 sm:translate-none sm:static sm:shadow-none sm:bg-transparent md:m-0">
+        <nav class="rounded-2xl py-4 w-[80%] max-w-[350px] ml-auto bg-400 absolute top-22 left-[50%] translate-x-[-50%] translate-y-[-150%] transition-transform duration-300 shadow-xl/30 peer-checked:translate-y-0 sm:translate-none sm:static sm:shadow-none sm:bg-transparent md:m-0">
             <ul class="grid gap-5 place-items-center text-white sm:grid-cols-5 sm:pr-3 md:order-2">
-                <li><a href="{{ url_for('index') }}" class="font-bold">Inicio</a></li>
-                <li><a href="{{ url_for('agenda') }}">Agenda</a></li>
-                <li><a href="{{ url_for('anfitrion') }}">Anfitrion</a></li>
-                <li><a href="{{ url_for('reseña') }}">Reseña</a></li>
-                <li><a href="{{ url_for('beneficios') }}">Beneficios</a></li>
+                <li class="{% if seccion == 'inicio' %}border-b-2{% endif %}">
+                    <a href="{{ url_for('index') }}" class="{% if seccion == 'inicio' %}font-bold{% endif %}">Inicio</a>
+                </li>
+                <li class="{% if seccion == 'agenda' %}border-b-2{% endif %}">
+                    <a href="{{ url_for('agenda') }}" class="{% if seccion == 'agenda' %}font-bold{% endif %}">Agenda</a>
+                </li>
+                <li class="{% if seccion == 'anfitrion' %}border-b-2{% endif %}">
+                    <a href="{{ url_for('anfitrion') }}" class="{% if seccion == 'anfitrion' %}font-bold{% endif %}">Anfitrion</a>
+                </li>
+                <li class="{% if seccion == 'reseña' %}border-b-2{% endif %}">
+                    <a href="{{ url_for('reseña') }}" class="{% if seccion == 'reseña' %}font-bold{% endif %}">Reseña</a>
+                </li>
+                <li class="{% if seccion == 'beneficios' %}border-b-2{% endif %}">
+                    <a href="{{ url_for('beneficios') }}" class="{% if seccion == 'beneficios' %}font-bold{% endif %}">Beneficios</a>
+                </li>
             </ul>
         </nav>
     </header>

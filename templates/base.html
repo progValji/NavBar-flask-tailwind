@@ -14,8 +14,8 @@
 
         <input type="checkbox" id="input__checkbox" class="hidden peer">
         <label for="input__checkbox" class="ml-auto">
-            <img src="{{url_for('static', filename = 'asset/hambur.svg')}}" alt="Icono Menu Hamburgesa">
-            <img src="{{url_for('static', filename = 'asset/x.svg')}}" alt="Menu X" class="hidden">
+            <img id="icon-hamburger" src="{{url_for('static', filename = 'asset/hambur.svg')}}" alt="Icono Menu Hamburgesa">
+            <img id="icon-close" src="{{url_for('static', filename = 'asset/x.svg')}}" alt="Menu X" class="hidden">
         </label>
 
         <a href="#" class="hidden">Registrate ahora</a>
@@ -36,5 +36,21 @@
     <footer class="bg-cyan-300 p-6">
         <p class="text-center font-bold">© Osvaldo Valdivia</p>
     </footer>
+
+    <script>
+        const checkbox = document.getElementById('input__checkbox');
+        const iconHamburger = document.getElementById('icon-hamburger');
+        const iconClose = document.getElementById('icon-close');
+
+        checkbox.addEventListener('change', function () {
+          if (this.checked) {
+            iconHamburger.classList.add('hidden');
+            iconClose.classList.remove('hidden');
+          } else {
+            iconHamburger.classList.remove('hidden');
+            iconClose.classList.add('hidden');
+          }
+        });
+    </script>
 </body>
 </html>

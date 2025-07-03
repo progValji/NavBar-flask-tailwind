@@ -374,6 +374,11 @@
     --tw-duration: 300ms;
     transition-duration: 300ms;
   }
+  .peer-checked\:block {
+    &:is(:where(.peer):checked ~ *) {
+      display: block;
+    }
+  }
   .peer-checked\:translate-y-0 {
     &:is(:where(.peer):checked ~ *) {
       --tw-translate-y: calc(var(--spacing) * 0);

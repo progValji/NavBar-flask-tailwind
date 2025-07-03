@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block title %} Reseña {% endblock %}
+
+{% block content %}
+    <h1>Esta es la pagina de reseña</h1>
+    <h2>Testimonios</h2>
+
+    <section>
+        <article>
+            <figure>
+                <img src="{{url_for('static', filename = 'asset/persona1.jpg')}}" alt="Persona1">
+                <div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto aut hic vero deleniti amet accusantium quo dolores temporibus voluptatum dolore.</p>
+                    <h3>Susana Torres</h3>
+                    <p>Desarrolladora Frontend</p>
+                </div>
+            </figure>
+        </article>
+        <article>
+            <figure>
+                <img src="{{url_for('static', filename = 'asset/persona2.jpg')}}" alt="Persona2">
+                <div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto aut hic vero deleniti amet accusantium quo dolores temporibus voluptatum dolore.</p>
+                    <h3>Juan Perez</h3>
+                    <p>Desarrllador Frontend/p>
+                </div>
+            </figure>
+        </article>
+        <article>
+            <figure>
+                <img src="{{url_for('static', filename = 'asset/persona3.jpg')}}" alt="Persona3">
+                <div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto aut hic vero deleniti amet accusantium quo dolores temporibus voluptatum dolore.</p>
+                    <h3>Margo Perry</h3>
+                    <p>Estudiante de Ingenieria Informatica</p>
+                </div>
+            </figure>
+        </article>
+        <article>
+            <figure>
+                <img src="{{url_for('static', filename = 'asset/persona4.jpg')}}" alt="Persona4">
+                <div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto aut hic vero deleniti amet accusantium quo dolores temporibus voluptatum dolore.</p>
+                    <h3>Mila Loo</h3>
+                    <p>Ingenieria en sistemas</p>
+                </div>
+            </figure>
+        </article>
+        <article>
+            <figure>
+                <img src="{{url_for('static', filename = 'asset/persona5.jpg')}}" alt="Persona5">
+                <div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto aut hic vero deleniti amet accusantium quo dolores temporibus voluptatum dolore.</p>
+                    <h3>Pual Carvajal</h3>
+                    <p>Ingeniero en sistemas</p>
+                </div>
+            </figure>
+        </article>
+    </section>
+{% endblock %}

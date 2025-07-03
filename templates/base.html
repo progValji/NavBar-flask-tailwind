@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/output.css') }}">
+    <title>Desarrollo Web - {% block title %}Por defecto{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <figure>
+            <img src="{{url_for('static', filename = 'asset/logo.jpg')}}" alt="Logo">
+        </figure>
+
+        <input type="checkbox" id="input__checkbox">
+        <label for="input__checkbox">
+            <img src="{{url_for('static', filename = 'asset/hambur.svg')}}" alt="Icono Menu Hamburgesa">
+        </label>
+
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Inicio</a></li>
+                <li><a href="{{ url_for('agenda') }}">Agenda</a></li>
+                <li><a href="{{ url_for('anfitrion') }}">Anfitrion</a></li>
+                <li><a href="{{ url_for('reseña') }}">Reseña</a></li>
+                <li><a href="{{ url_for('beneficios') }}">Beneficios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    {% block content %}{% endblock %}
+
+    <footer>
+        <p>© Osvaldo Valdivia</p>
+    </footer>
+</body>
+</html>

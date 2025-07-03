@@ -7,7 +7,7 @@
     <title>Desarrollo Web - {% block title %}Por defecto{% endblock %}</title>
 </head>
 <body class="font-roboto">
-    <header class="max-w-[1200px] h-20 bg-cyan-300 flex px-5 py-2.5 items-center flex-wrap relative">
+    <header class="w-screen h-20 bg-600 flex px-5 py-2.5 items-center flex-wrap relative md:justify-evenly">
         <figure>
             <img src="{{url_for('static', filename = 'asset/logo.png')}}" alt="Logo" class="w-[70px]">
         </figure>
@@ -18,10 +18,10 @@
             <img id="icon-close" src="{{url_for('static', filename = 'asset/x.svg')}}" alt="Menu X" class="hidden">
         </label>
 
-        <a href="#" class="hidden">Registrate ahora</a>
+        <a href="#" class="bg-400 font-bol py-2.5 px-5 text-white rounded-xl hidden md:block md:order-3">Registrate ahora</a>
 
-        <nav class="rounded-2xl py-4 w-[80%] max-w-[350px] ml-auto bg-cyan-600 absolute top-22 left-[50%] translate-x-[-50%] translate-y-[-150%] transition-transform duration-300 shadow-xl/30 peer-checked:translate-y-0 sm:translate-none sm:static sm:shadow-none sm:bg-cyan-300">
-            <ul class="grid gap-5 place-items-center text-white sm:grid-cols-5 sm:pr-3">
+        <nav class="rounded-2xl py-4 w-[80%] max-w-[350px] ml-auto bg-200 absolute top-22 left-[50%] translate-x-[-50%] translate-y-[-150%] transition-transform duration-300 shadow-xl/30 peer-checked:translate-y-0 sm:translate-none sm:static sm:shadow-none sm:bg-transparent md:m-0">
+            <ul class="grid gap-5 place-items-center text-white sm:grid-cols-5 sm:pr-3 md:order-2">
                 <li><a href="{{ url_for('index') }}" class="font-bold">Inicio</a></li>
                 <li><a href="{{ url_for('agenda') }}">Agenda</a></li>
                 <li><a href="{{ url_for('anfitrion') }}">Anfitrion</a></li>
@@ -33,8 +33,8 @@
 
     {% block content %}{% endblock %}
 
-    <footer class="bg-cyan-300 p-6">
-        <p class="text-center font-bold">© Osvaldo Valdivia</p>
+    <footer class="bg-600 p-6">
+        <p class="text-center font-bold text-white">© Osvaldo Valdivia</p>
     </footer>
 
     <script>

@@ -3,4 +3,18 @@
 
 @theme{
     --font-roboto: "Roboto Condensed", sans-serif;
+    --color-*: initial;
+    --color-50: #effaf6;
+    --color-100: #d8f3e8;
+    --color-200: #b4e6d4;
+    --color-300: #82d3bc;
+    --color-400: #4fb89d;
+    --color-500: #2c9d83;
+    --color-600: #1e806c;
+    --color-700: #186457;
+    --color-800: #155045;
+    --color-900: #12423a;
+    --color-950: #092521;
+    --color-white: #fff;
+
 }

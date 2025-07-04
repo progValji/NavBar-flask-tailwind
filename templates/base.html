@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/output.css') }}">
     <title>Desarrollo Web - {% block title %}Por defecto{% endblock %}</title>
 </head>
-<body class="font-roboto">
+<body class="font-roboto overflow-x-hidden">
     <header class="w-screen h-20 bg-600 flex px-5 py-2.5 items-center flex-wrap relative md:justify-evenly">
         <figure>
             <img src="{{url_for('static', filename = 'asset/logo.png')}}" alt="Logo" class="w-[70px]">

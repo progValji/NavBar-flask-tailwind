@@ -6,7 +6,7 @@
     <section class="bg-200 flex justify-center items-center" style="height: calc(100vh - 160px);">
         <seccion class="w-[90%] max-w-[500px] flex flex-col">
             <div class="bg-700 text-white p-6 rounded-t-lg">
-                <h1 class="text-4xl font-bold mb-3"><span>2</span> de Julio 2025</h1>
+                <h1 class="text-3xl font-bold mb-3 sm:text-4xl"><span>2</span> de Julio 2025</h1>
                 <p>Bienvenida</p>
             </div>
             <div class="p-4 bg-300 rounded-b-lg">
@@ -28,15 +28,15 @@
                             <td></td>
                             <td>1</td>
                             <td>2</td>
-                            <td class="after:content-['*'] after:text-rojo after:text-2xl">3</td>
+                            <td class="after:content-['*'] after:text-rojo after:text-2xl cursor-pointer" data-dia="3" data-numeroDia="0">3</td>
                             <td>4</td>
                             <td>5</td>
                         </tr>
                         <tr class="text-center">
                             <td>6</td>
-                            <td class="after:content-['*'] after:text-rojo after:text-2xl">7</td>
+                            <td class="after:content-['*'] after:text-rojo after:text-2xl cursor-pointer" data-dia="7" data-numeroDia="1">7</td>
                             <td>8</td>
-                            <td class="after:content-['*'] after:text-rojo after:text-2xl">9</td>
+                            <td class="after:content-['*'] after:text-rojo after:text-2xl cursor-pointer" data-dia="9" data-numeroDia="2">9</td>
                             <td>10</td>
                             <td>11</td>
                             <td>12</td>
@@ -46,25 +46,25 @@
                             <td>14</td>
                             <td>15</td>
                             <td>16</td>
-                            <td class="after:content-['*'] after:text-rojo after:text-2xl">17</td>
+                            <td class="after:content-['*'] after:text-rojo after:text-2xl cursor-pointer" data-dia="17" data-numeroDia="3">17</td>
                             <td>18</td>
                             <td>19</td>
                         </tr>
                         <tr class="text-center">
                             <td>20</td>
                             <td>21</td>
-                            <td class="after:content-['*'] after:text-rojo after:text-2xl">22</td>
+                            <td class="after:content-['*'] after:text-rojo after:text-2xl cursor-pointer" data-dia="22" data-numeroDia="4">22</td>
                             <td>23</td>
                             <td>24</td>
-                            <td class="after:content-['*'] after:text-rojo after:text-2xl">25</td>
+                            <td class="after:content-['*'] after:text-rojo after:text-2xl cursor-pointer" data-dia="25" data-numeroDia="5">25</td>
                             <td>26</td>
                         </tr>
                         <tr class="text-center">
                             <td>27</td>
                             <td>28</td>
                             <td>29</td>
-                            <td class="after:content-['*'] after:text-rojo after:text-2xl">30</td>
-                            <td class="after:content-['*'] after:text-rojo after:text-2xl">31</td>
+                            <td class="after:content-['*'] after:text-rojo after:text-2xl cursor-pointer" data-dia="30" data-numeroDia="6">30</td>
+                            <td class="after:content-['*'] after:text-rojo after:text-2xl cursor-pointer" data-dia="31" data-numeroDia="7">31</td>
                             <td></td>
                             <td></td>
                         </tr>
@@ -73,4 +73,28 @@
             </div>
         </seccion>
     </section>
+    <script>
+        eventos = [
+            'Registro y Bienvenida',
+            'Keynote: El Futuro del desarrollo web',
+            'Introduccion a Web3',
+            'Retos del desarrollo Frontend',
+            'Networking',
+            'JavaScript A Fondo',
+            'JavaScript y TypeScript',
+            'Conferencia',
+            'Cierre y Agradecimentos'
+        ]
+        document.querySelectorAll('td[data-dia]').forEach(function(td){
+            td.addEventListener('click', function(){
+                dia = this.getAttribute('data-dia')
+                numero = this.getAttribute('data-numeroDia')
+                document.querySelector('h1 span').textContent = dia
+                document.querySelector('h1 + p').textContent = eventos[numero]
+            })
+        })
+
+        document.querySelector('h1 span').textContent = 3
+        document.querySelector('h1 + p').textContent = eventos[0]
+    </script>
 {% endblock %}

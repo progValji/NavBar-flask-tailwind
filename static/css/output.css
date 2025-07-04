@@ -9,6 +9,16 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --spacing: 0.25rem;
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.75 / 1.25);
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: calc(2.25 / 1.875);
+    --text-4xl: 2.25rem;
+    --text-4xl--line-height: calc(2.5 / 2.25);
+    --text-5xl: 3rem;
+    --text-5xl--line-height: 1;
     --font-weight-bold: 700;
     --radius-xl: 0.75rem;
     --radius-2xl: 1rem;
@@ -22,6 +32,7 @@
     --color-500: #2c9d83;
     --color-600: #1e806c;
     --color-700: #186457;
+    --color-800: #155045;
     --color-white: #fff;
   }
 }
@@ -180,14 +191,35 @@
   .static {
     position: static;
   }
+  .top-0 {
+    top: calc(var(--spacing) * 0);
+  }
   .top-22 {
     top: calc(var(--spacing) * 22);
+  }
+  .right-0 {
+    right: calc(var(--spacing) * 0);
+  }
+  .bottom-0 {
+    bottom: calc(var(--spacing) * 0);
+  }
+  .left-0 {
+    left: calc(var(--spacing) * 0);
   }
   .left-\[50\%\] {
     left: 50%;
   }
+  .z-10 {
+    z-index: 10;
+  }
+  .z-20 {
+    z-index: 20;
+  }
   .mx-auto {
     margin-inline: auto;
+  }
+  .my-7 {
+    margin-block: calc(var(--spacing) * 7);
   }
   .ml-auto {
     margin-left: auto;
@@ -225,11 +257,17 @@
   .w-\[90\%\] {
     width: 90%;
   }
+  .w-full {
+    width: 100%;
+  }
   .w-screen {
     width: 100vw;
   }
   .max-w-\[350px\] {
     max-width: 350px;
+  }
+  .max-w-\[670px\] {
+    max-width: 670px;
   }
   .max-w-\[1200px\] {
     max-width: 1200px;
@@ -266,6 +304,9 @@
   .gap-5 {
     gap: calc(var(--spacing) * 5);
   }
+  .overflow-hidden {
+    overflow: hidden;
+  }
   .overflow-x-hidden {
     overflow-x: hidden;
   }
@@ -279,6 +320,10 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .border-2 {
+    border-style: var(--tw-border-style);
+    border-width: 2px;
+  }
   .border-b-2 {
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 2px;
@@ -291,6 +336,9 @@
   }
   .bg-700 {
     background-color: var(--color-700);
+  }
+  .bg-800 {
+    background-color: var(--color-800);
   }
   .bg-gradient-to-l {
     --tw-gradient-position: to left in oklab;
@@ -309,6 +357,9 @@
   }
   .bg-cover {
     background-size: cover;
+  }
+  .bg-fixed {
+    background-attachment: fixed;
   }
   .bg-center {
     background-position: center;
@@ -337,6 +388,10 @@
   .font-roboto {
     font-family: var(--font-roboto);
   }
+  .text-3xl {
+    font-size: var(--text-3xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
+  }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
@@ -346,6 +401,9 @@
   }
   .underline {
     text-decoration-line: underline;
+  }
+  .decoration-solid {
+    text-decoration-style: solid;
   }
   .shadow-xl\/30 {
     --tw-shadow-alpha: 30%;
@@ -419,6 +477,11 @@
       grid-template-columns: repeat(5, minmax(0, 1fr));
     }
   }
+  .sm\:flex-row {
+    @media (width >= 40rem) {
+      flex-direction: row;
+    }
+  }
   .sm\:bg-transparent {
     @media (width >= 40rem) {
       background-color: transparent;
@@ -427,6 +490,18 @@
   .sm\:pr-3 {
     @media (width >= 40rem) {
       padding-right: calc(var(--spacing) * 3);
+    }
+  }
+  .sm\:text-4xl {
+    @media (width >= 40rem) {
+      font-size: var(--text-4xl);
+      line-height: var(--tw-leading, var(--text-4xl--line-height));
+    }
+  }
+  .sm\:text-lg {
+    @media (width >= 40rem) {
+      font-size: var(--text-lg);
+      line-height: var(--tw-leading, var(--text-lg--line-height));
     }
   }
   .sm\:shadow-none {
@@ -458,6 +533,18 @@
   .md\:justify-evenly {
     @media (width >= 48rem) {
       justify-content: space-evenly;
+    }
+  }
+  .md\:text-5xl {
+    @media (width >= 48rem) {
+      font-size: var(--text-5xl);
+      line-height: var(--tw-leading, var(--text-5xl--line-height));
+    }
+  }
+  .md\:text-xl {
+    @media (width >= 48rem) {
+      font-size: var(--text-xl);
+      line-height: var(--tw-leading, var(--text-xl--line-height));
     }
   }
 }

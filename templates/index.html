@@ -4,13 +4,15 @@
 
 {% block content %}
     <section class="bg-700 text-white h-lvh bg-[url('/static/asset/conferencia.jpg')] bg-cover bg-center bg-no-repeat relative">
-        <section class="w-[90%] max-w-[1200px] mx-auto h-full flex flex-col justify-center items-center">
-            <h1>Liberando el poder del Desarrollo Web</h1>
-            <p>Unete a nosotros en un emocionante viaje al mundo del Desarrollo Web donde creemos en aprovechar el potencial ilimitado de la innovación, la tecnología y el capital</p>
-            <div>
-                <a href="#">Reserva tu lugar ahora</a>
-                <a href="#">Más Información</a>
-            </div>
-        </section>
+        <div class="absolute z-10 bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed" style="background-color: rgba(0, 0, 0, 0.523);">
+            <section class="w-[90%] max-w-[670px] mx-auto h-full flex flex-col justify-center items-center text-center">
+                <h1 class="text-3xl font-bold sm:text-4xl md:text-5xl">Liberando el poder del Desarrollo Web</h1>
+                <p class="my-7 sm:text-lg md:text-xl">Unete a nosotros en un emocionante viaje al mundo del Desarrollo Web donde creemos en aprovechar el potencial ilimitado de la innovación, la tecnología y el capital.</p>
+                <div class="flex flex-col gap-5 sm:flex-row">
+                    <a href="#" class="bg-800 px-5 py-2.5 rounded-xl transition-transform duration-300 hover:scale-[1.1]">Reserva tu lugar ahora</a>
+                    <a href="#" class="border-2 px-5 py-2.5 underline decoration-solid transition-transform duration-300 hover:scale-[1.1]">Más Información</a>
+                </div>
+            </section>
+        </div>
     </section>
 {% endblock %}

@@ -3,59 +3,76 @@
 {% block title %} Reseña {% endblock %}
 
 {% block content %}
-    <h1>Esta es la pagina de reseña</h1>
-    <h2>Testimonios</h2>
+    
+    <section class="w-[90%] max-w-[1200px] mx-auto mt-8">    
+        <h2 class="text-4xl text-center font-bold mb-5">Testimonios</h2>
+        <seccion class="mb-10 grid grid-cols-1 grid-rows-[350px_350px_350px_350px_350px] gap-6">
 
-    <seccion>
-        <article>
-            <figure>
-                <img src="{{url_for('static', filename = 'asset/persona1.jpg')}}" alt="Persona1">
-                <div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto aut hic vero deleniti amet accusantium quo dolores temporibus voluptatum dolore.</p>
-                    <h3>Susana Torres</h3>
-                    <p>Desarrolladora Frontend</p>
+            <article class="flex flex-col bg-200 rounded-xl shadow-xl/20">
+                <figure class="basis-[50%] h-[150px]">
+                    <img src="{{url_for('static', filename = 'asset/persona1.jpg')}}" class="h-full w-full object-cover rounded-t-xl" alt="Persona1">
+                </figure>
+                <div class="basis-[50%] p-4">
+                    <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto aut hic vero deleniti amet accusantium quo dolores temporibus voluptatum dolore.</p>
+                    <div>
+                        <p class="font-bold">Susana Torres</p>
+                        <p class="text-700 font-bold">Desarrolladora Frontend</p>
+                    </div>
                 </div>
-            </figure>
-        </article>
-        <article>
-            <figure>
-                <img src="{{url_for('static', filename = 'asset/persona2.jpg')}}" alt="Persona2">
-                <div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto aut hic vero deleniti amet accusantium quo dolores temporibus voluptatum dolore.</p>
-                    <h3>Juan Perez</h3>
-                    <p>Desarrllador Frontend/p>
+            </article>
+
+            <article class="flex flex-col bg-200 rounded-xl shadow-xl/20">
+                <figure class="basis-[50%] h-[150px]">
+                    <img src="{{url_for('static', filename = 'asset/persona2.jpg')}}" class="h-full w-full object-cover rounded-t-xl" alt="Persona2">
+                </figure>
+                <div class="basis-[50%] p-4">
+                    <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto aut hic vero deleniti amet accusantium quo dolores temporibus voluptatum dolore.</p>
+                    <div>
+                        <p class="font-bold">Juan Perez</p>
+                        <p class="text-700 font-bold">Desarrllador Frontend</p>
+                    </div>
                 </div>
-            </figure>
-        </article>
-        <article>
-            <figure>
-                <img src="{{url_for('static', filename = 'asset/persona3.jpg')}}" alt="Persona3">
-                <div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto aut hic vero deleniti amet accusantium quo dolores temporibus voluptatum dolore.</p>
-                    <h3>Margo Perry</h3>
-                    <p>Estudiante de Ingenieria Informatica</p>
+            </article>
+
+            <article class="flex flex-col bg-200 rounded-xl shadow-xl/20">
+                <figure class="basis-[50%] h-[150px]">
+                    <img src="{{url_for('static', filename = 'asset/persona3.jpg')}}" class="h-full w-full object-cover rounded-t-xl" alt="Persona3">
+                </figure>
+                <div class="basis-[50%] p-4">
+                    <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto aut hic vero deleniti amet accusantium quo dolores temporibus voluptatum dolore.</p>
+                    <div>
+                        <p class="font-bold">Margo Perry</p>
+                        <p class="text-700 font-bold">Estudiante de Ingeniería Informática</p>
+                    </div>
                 </div>
-            </figure>
-        </article>
-        <article>
-            <figure>
-                <img src="{{url_for('static', filename = 'asset/persona4.jpg')}}" alt="Persona4">
-                <div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto aut hic vero deleniti amet accusantium quo dolores temporibus voluptatum dolore.</p>
-                    <h3>Mila Loo</h3>
-                    <p>Ingenieria en sistemas</p>
+            </article>
+
+            <article class="flex flex-col bg-200 rounded-xl shadow-xl/20">
+                <figure class="basis-[50%] h-[150px]">
+                    <img src="{{url_for('static', filename = 'asset/persona4.jpg')}}" class="h-full w-full object-cover rounded-t-xl" alt="Persona4">
+                </figure>
+                <div class="basis-[50%] p-4">
+                    <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto aut hic vero deleniti amet accusantium quo dolores temporibus voluptatum dolore.</p>
+                    <div>
+                        <p class="font-bold">Mila Loo</p>
+                        <p class="text-700 font-bold">Ingeniería en Sistemas</p>
+                    </div>
                 </div>
-            </figure>
-        </article>
-        <article>
-            <figure>
-                <img src="{{url_for('static', filename = 'asset/persona5.jpg')}}" alt="Persona5">
-                <div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto aut hic vero deleniti amet accusantium quo dolores temporibus voluptatum dolore.</p>
-                    <h3>Pual Carvajal</h3>
-                    <p>Ingeniero en sistemas</p>
+            </article>
+
+            <article class="flex flex-col bg-200 rounded-xl shadow-xl/20">
+                <figure class="basis-[50%] h-[150px]">
+                    <img src="{{url_for('static', filename = 'asset/persona5.jpg')}}" class="h-full w-full object-cover rounded-t-xl" alt="Persona5">
+                </figure>
+                <div class="basis-[50%] p-4">
+                    <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto aut hic vero deleniti amet accusantium quo dolores temporibus voluptatum dolore.</p>
+                    <div>
+                        <p class="font-bold">Pual Carvajal</p>
+                        <p class="text-700 font-bold">Ingeniero en Sistemas</p>
+                    </div>
                 </div>
-            </figure>
-        </article>
+            </article>
+            
+        </section>
     </seccion>
 {% endblock %}

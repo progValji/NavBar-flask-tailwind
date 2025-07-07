@@ -325,6 +325,9 @@
   .max-w-\[500px\] {
     max-width: 500px;
   }
+  .max-w-\[600px\] {
+    max-width: 600px;
+  }
   .max-w-\[670px\] {
     max-width: 670px;
   }
@@ -712,6 +715,16 @@
   .sm\:flex-row {
     @media (width >= 40rem) {
       flex-direction: row;
+    }
+  }
+  .sm\:flex-wrap {
+    @media (width >= 40rem) {
+      flex-wrap: wrap;
+    }
+  }
+  .sm\:justify-center {
+    @media (width >= 40rem) {
+      justify-content: center;
     }
   }
   .sm\:bg-transparent {

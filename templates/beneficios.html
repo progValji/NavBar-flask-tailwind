@@ -4,11 +4,21 @@
 
 {% block content %}
     <style>
-        summary::marker{
-            content: '✅';
+        summary {
+            list-style: none; /* Oculta el marker nativo */
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        details[open] summary::marker{
-            content: '❌';
+        summary::-webkit-details-marker {
+            display: none; /* Oculta el marker en navegadores Webkit */
+        }
+        .icon-marker {
+            transition: transform 0.3s;
+        }
+        details[open] .icon-marker {
+            transform: rotate(180deg);
         }
     </style>
 
@@ -17,26 +27,27 @@
 
         <seccion class="flex flex-col gap-4">
             <details class="border-2 border-500 p-3 rounded-xl">
-                <summary class=" font-bold">Acceso a conferencias Exclusivas</summary>
+                <summary class=" font-bold">Acceso a conferencias Exclusivas <span class="icon-marker">⬇️</span></summary>
                 <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sapiente incidunt eligendi iusto optio est aperiam doloribus architecto blanditiis molestias!</p>
             </details>
             <details class="border-2 border-500 p-3 rounded-xl">
-                <summary class="font-bold">Certificado de participación</summary>
+                <summary class="font-bold">Certificado de participación <span class="icon-marker">⬇️</span></summary>
                 <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, aliquam culpa. Illo neque necessitatibus numquam magni, cum veritatis voluptate labore.</p>
             </details>
             <details class="border-2 border-500 p-3 rounded-xl">
-                <summary class="font-bold">Networking con expertos</summary>
+                <summary class="font-bold">Networking con expertos <span class="icon-marker">⬇️</span></summary>
                 <p class="mt-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique libero culpa molestias veritatis odit! Repudiandae, provident! Quibusdam repellat cupiditate architecto.</p>
             </details>
             <details class="border-2 border-500 p-3 rounded-xl">
-                <summary class="font-bold">Material descargable y grabaciones</summary>
+                <summary class="font-bold">Material descargable y grabaciones <span class="icon-marker">⬇️</span></summary>
                 <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, cumque cum. Doloremque numquam eius maxime deleniti voluptatem cupiditate, soluta nisi!</p>
             </details>
             <details class="border-2 border-500 p-3 rounded-xl">
-                <summary class="font-bold">Descuentos para cursos</summary>
+                <summary class="font-bold">Descuentos para cursos <span class="icon-marker">⬇️</span></summary>
                 <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias aliquid amet perspiciatis ad dicta voluptates officiis distinctio vitae cupiditate consectetur!</p>
             </details>
         </seccion>
     </section>
+
 
 {% endblock %}

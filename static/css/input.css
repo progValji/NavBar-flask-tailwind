@@ -17,4 +17,6 @@
     --color-950: #092521;
     --color-white: #fff;
     --color-rojo: #e7000b;
+
+    --breakpoint-sm2: 31rem;
 }

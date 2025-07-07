@@ -3,30 +3,40 @@
 {% block title %} Beneficios {% endblock %}
 
 {% block content %}
-    <h1>Esta es la pagina de beneficios</h1>
-    <h2>Beneficios</h2>
+    <style>
+        summary::marker{
+            content: '✅';
+        }
+        details[open] summary::marker{
+            content: '❌';
+        }
+    </style>
 
-    <seccion>
-        <details>
-            <summary>Acceso a conferencias Exclusivas</summary>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sapiente incidunt eligendi iusto optio est aperiam doloribus architecto blanditiis molestias!</p>
-        </details>
-        <details>
-            <summary>Certificado de participación</summary>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, aliquam culpa. Illo neque necessitatibus numquam magni, cum veritatis voluptate labore.</p>
-        </details>
-        <details>
-            <summary>Networking con expertos</summary>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique libero culpa molestias veritatis odit! Repudiandae, provident! Quibusdam repellat cupiditate architecto.</p>
-        </details>
-        <details>
-            <summary>Material descargable y grabaciones</summary>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, cumque cum. Doloremque numquam eius maxime deleniti voluptatem cupiditate, soluta nisi!</p>
-        </details>
-        <details>
-            <summary>Descuentos para cursos</summary>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias aliquid amet perspiciatis ad dicta voluptates officiis distinctio vitae cupiditate consectetur!</p>
-        </details>
-    </seccion>
+    <section class="w-[90%] max-w-[1200px] mx-auto mt-11 h-screen">
+        <h1 class="text-center text-3xl text-600 font-bold mb-5">¿Qué beneficios encuentro?</h1>
+
+        <seccion class="flex flex-col gap-4">
+            <details class="border-2 border-500 p-3 rounded-xl">
+                <summary class=" font-bold">Acceso a conferencias Exclusivas</summary>
+                <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sapiente incidunt eligendi iusto optio est aperiam doloribus architecto blanditiis molestias!</p>
+            </details>
+            <details class="border-2 border-500 p-3 rounded-xl">
+                <summary class="font-bold">Certificado de participación</summary>
+                <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, aliquam culpa. Illo neque necessitatibus numquam magni, cum veritatis voluptate labore.</p>
+            </details>
+            <details class="border-2 border-500 p-3 rounded-xl">
+                <summary class="font-bold">Networking con expertos</summary>
+                <p class="mt-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique libero culpa molestias veritatis odit! Repudiandae, provident! Quibusdam repellat cupiditate architecto.</p>
+            </details>
+            <details class="border-2 border-500 p-3 rounded-xl">
+                <summary class="font-bold">Material descargable y grabaciones</summary>
+                <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, cumque cum. Doloremque numquam eius maxime deleniti voluptatem cupiditate, soluta nisi!</p>
+            </details>
+            <details class="border-2 border-500 p-3 rounded-xl">
+                <summary class="font-bold">Descuentos para cursos</summary>
+                <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias aliquid amet perspiciatis ad dicta voluptates officiis distinctio vitae cupiditate consectetur!</p>
+            </details>
+        </seccion>
+    </section>
 
 {% endblock %}

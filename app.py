@@ -12,11 +12,6 @@ def agenda():
     seccion = "agenda"
     return render_template('agenda.html', seccion = seccion)
 
-@app.route('/anfitrion')
-def anfitrion():
-    seccion = "anfitrion"
-    return render_template('anfitrion.html', seccion = seccion)
-
 @app.route('/reseña')
 def reseña():
     seccion = "reseña"

@@ -20,3 +20,9 @@
 
     --breakpoint-sm2: 31rem;
 }
+
+@layer components{
+    .card{
+        @apply flex flex-col bg-200 rounded-xl shadow-xl/20 sm2:flex-row sm2:max-w-[612px] sm2:justify-self-center;
+    }
+}

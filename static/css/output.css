@@ -378,6 +378,10 @@
     border-bottom-right-radius: var(--radius-lg);
     border-bottom-left-radius: var(--radius-lg);
   }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
   .border-2 {
     border-style: var(--tw-border-style);
     border-width: 2px;
@@ -723,6 +727,26 @@
   .lg\:grid-rows-\[300px_300px_300px\] {
     @media (width >= 64rem) {
       grid-template-rows: 300px 300px 300px;
+    }
+  }
+}
+@layer components {
+  .card {
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--radius-xl);
+    background-color: var(--color-200);
+    --tw-shadow-alpha: 20%;
+    --tw-shadow: 0 20px 25px -5px var(--tw-shadow-color, oklab(from rgb(0 0 0 / 0.1) l a b / 20%)), 0 8px 10px -6px var(--tw-shadow-color, oklab(from rgb(0 0 0 / 0.1) l a b / 20%));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    @media (width >= 31rem) {
+      max-width: 612px;
+    }
+    @media (width >= 31rem) {
+      flex-direction: row;
+    }
+    @media (width >= 31rem) {
+      justify-self: center;
     }
   }
 }
